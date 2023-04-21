@@ -2,4 +2,4 @@
 This is a PyTorch implementation of the paper
 
 
-## The code will be coming soon
+## The code will be coming soon within a week
