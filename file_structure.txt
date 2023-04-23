@@ -1,0 +1,29 @@
+.
+├── common.py
+├── configs.py
+├── dataset
+│   ├── HAR_dataset.py
+│   └── ucihar
+├── Figure
+│   └── inference_time.png
+├── file_structure.txt
+├── loss
+│   └── SupCon.py
+├── main.py
+├── models
+│   ├── Baseline_CNN.py
+│   ├── CoS_CNN.py
+│   └── __init__.py
+├── README.md
+├── requirements.txt
+├── save
+├── scripts
+│   └── run.sh
+└── utils
+    ├── augmentations.py
+    ├── logger.py
+    ├── metric.py
+    ├── setup.py
+    └── train.py
+
+8 directories, 18 files

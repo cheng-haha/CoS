@@ -1,0 +1,7 @@
+numpy==1.19.5
+pandas==1.1.5
+pyfiglet==0.8.post1
+scikit_learn==1.2.2
+scipy==1.5.4
+torch==1.8.0+cu111
+tqdm==4.36.1
