@@ -1,15 +1,15 @@
 '''
 Description: 
 Date: 2023-04-18 20:53:33
-LastEditTime: 2023-04-23 13:39:45
+LastEditTime: 2023-04-24 12:44:41
 FilePath: /chengdongzhou/action/CoS/common.py
 '''
 
 channel_list    =  {
-                    'ucihar':   [ 64, 128, 256, 4608, 6  ],
-                    'pamap2':   [ 64, 128, 256, 9216, 12 ],
-                    'wisdm' :   [ 64, 128, 256, 5376, 6  ],
-                    'unimib':   [ 64, 128, 256, 1536, 17 ],
+                    'ucihar':   [ 64, 128, 256, 6  ],
+                    'pamap2':   [ 64, 128, 256, 12 ],
+                    'wisdm' :   [ 64, 128, 256, 6  ],
+                    'unimib':   [ 64, 128, 256, 17 ],
                         }
 
 conv_list       =   {

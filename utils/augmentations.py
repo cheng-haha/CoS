@@ -1,14 +1,8 @@
-'''
-Author: error: git config user.name && git config user.email & please set dead value or install git
-Date: 2022-10-12 21:38:44
-LastEditors: Please set LastEditors
-LastEditTime: 2023-04-23 23:01:24
-FilePath: /chengdongzhou/action/CoS/utils/augmentations.py
-Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-'''
+
 import numpy as np
 import torch
 import random
+
 
 def gen_aug(sample, ssh_type = 'na'):
     if ssh_type == 'na':

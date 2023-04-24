@@ -1,7 +1,7 @@
 '''
 Description: 
 Date: 2023-04-18 20:53:33
-LastEditTime: 2023-04-23 19:53:02
+LastEditTime: 2023-04-24 12:40:47
 FilePath: /chengdongzhou/action/CoS/models/CoS_CNN.py
 '''
 import torch.nn as nn
@@ -18,8 +18,8 @@ from configs import args
 class SimpleProjector(nn.Module):
     def __init__(self,  out_dim ,  sensor_dim ,  proj_dim ,*args ,**kwargs ):
         super(SimpleProjector, self).__init__()
-        self.proj_dim = proj_dim
-        self.prejector = nn.Sequential( 
+        self.proj_dim   = proj_dim
+        self.prejector  = nn.Sequential( 
                                         nn.AdaptiveAvgPool2d( ( ( 1, sensor_dim ) ) ),
                                         nn.ReLU(),
                                         nn.Flatten(),
@@ -32,7 +32,7 @@ class SimpleProjector(nn.Module):
 
 
 class CoS_CNN(nn.Module):
-    def __init__(self, data_name , embedding_dim = args.proj_dim ):
+    def __init__(self, data_name , sub_number = 3, embedding_dim = args.proj_dim ):
         super(CoS_CNN, self).__init__()
         channel     = channel_list[data_name]
         conv_params = conv_list[data_name]
@@ -51,7 +51,8 @@ class CoS_CNN(nn.Module):
         self.auxiliary3 = SimpleProjector( channel[2] , GetFeatureMapSize(data_name,3)[1] , 
                                         embedding_dim  ) 
         
-        self.classifier  = nn.Linear( channel[-2] , channel[-1]   )
+        h,w = GetFeatureMapSize(data_name,sub_number)
+        self.classifier  = nn.Linear(   channel[2]* h * w , channel[-1]   )
 
     def forward(self, x):
         feature_list    = []
@@ -67,10 +68,10 @@ class CoS_CNN(nn.Module):
         rep = x.view(B,-1)
         out = self.classifier(rep)
         if self.training:
-            out1_feature = self.auxiliary1(feature_list[0])
-            out2_feature = self.auxiliary2(feature_list[1])
-            out3_feature = self.auxiliary3(feature_list[2])
-            feat_list = [out3_feature , out2_feature , out1_feature ]
+            out1_feature    = self.auxiliary1(feature_list[0])
+            out2_feature    = self.auxiliary2(feature_list[1])
+            out3_feature    = self.auxiliary3(feature_list[2])
+            feat_list       = [out3_feature , out2_feature , out1_feature ]
             for index in range(len(feat_list)):
                 feat_list[index] = F.normalize(feat_list[index], dim=1)
         res = {}
