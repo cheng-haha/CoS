@@ -14,6 +14,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = str(args.device)
 import numpy as np
 from dataset.HAR_dataset import HARDataset
 from utils.logger import initialize_logger
+from utils.setup import set_seed
 from utils.train import MetaTrain
 import warnings
 warnings.filterwarnings("ignore")
@@ -37,6 +38,7 @@ if __name__ == "__main__":
     logger  = initialize_logger(log_dir)
     for i in range(args.times):
         args.time   = i
+        set_seed(i+1)
         # train
         logger.info(f'\n-------run time {i}--------\n')
         train = MetaTrain(args)
