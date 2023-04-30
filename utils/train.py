@@ -199,7 +199,7 @@ def evaluate(model,logger, eval_loader, epoch, not_valid=True, mode='best', no_d
         logger.info('=> test@Acc: {:.5f}%, test@F1: {:.5f}'.format(acc_test, f1_test))
         c_mat  = confusion_matrix(label, predicted)
         result = open(os.path.join(args.save_folder, 'result'), 'a+')
-        record_result(result, epoch, acc_test, f1_test, c_mat)
+        record_result(result, epoch, acc_test, f1_test, c_mat,record_flag = -1)
     else:
         logger.info('=> valid@Acc: {:.5f}, valid@F1: {:.5f}'.format(acc_test, f1_test))
         logger.info('=> cls_loss: {:.7f}'.format(batch_loss))
