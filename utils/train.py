@@ -204,14 +204,14 @@ def evaluate(model,logger, eval_loader, epoch, not_valid=True, mode='best', no_d
         logger.info('=> valid@Acc: {:.5f}, valid@F1: {:.5f}'.format(acc_test, f1_test))
         logger.info('=> cls_loss: {:.7f}'.format(batch_loss))
 
-    if acc_test > state['best_acc']:
-            # metrics for mesuring performance of model
-            state['best_acc'] = acc_test
-            state['best_f1'] = f1_test
-            # calculate best confusion matrix
-            state['cmt'] = confusion_matrix(ALL_label, ALL_predicted)
-            
-            state['best_epoch'] = epoch
-            torch.save( model.state_dict(), os.path.join(args.save_folder, 'best.pth') )
+        if acc_test > state['best_acc']:
+                # metrics for mesuring performance of model
+                state['best_acc'] = acc_test
+                state['best_f1'] = f1_test
+                # calculate best confusion matrix
+                state['cmt'] = confusion_matrix(ALL_label, ALL_predicted)
+
+                state['best_epoch'] = epoch
+                torch.save( model.state_dict(), os.path.join(args.save_folder, 'best.pth') )
             
     return total_loss, acc_test, f1_test , state
