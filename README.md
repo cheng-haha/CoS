@@ -1,4 +1,5 @@
 <p align=center> <img src="./Figure/frame.png" width = 60%/> </p>
+
 <h1 style="color:lightblue; text-align:center;">This heading is light blue and centered!</h1>
 
 This is a PyTorch implementation of the paper **"Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition"**
