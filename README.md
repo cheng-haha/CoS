@@ -1,4 +1,4 @@
-# <center>CoS</center>
+# <center> CoS </center>
 This is a PyTorch implementation of the paper ***"Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition"***
 
 html <div align=center> <img src="./Figure/frame.png" width = 100%/> </div>
