@@ -3,6 +3,7 @@
 <h1 align="center"> CoS </h1>
 
 <p align="center">Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition </p>
+
 [Dongzhou Cheng](https://github.com/cheng-haha)
 
 ## Abstract
