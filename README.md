@@ -1,7 +1,7 @@
-# <center> CoS </center>
+<h1 align="center"> CoS </h1>
 This is a PyTorch implementation of the paper ***"Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition"***
 
-html <div align=center> <img src="./Figure/frame.png" width = 100%/> </div>
+<p align=center> <img src="./Figure/frame.png" width = 60%/> </p>
 
 ## Abstract
 TODO. We hope this research can bring a new perspective to the HAR community.
