@@ -1,5 +1,5 @@
 <p align=center> <img src="./Figure/frame.png" width = 60%/> </p>
-<h1 align="center" style="color:blue;"> CoS </h1>
+<h1 align="center" style="color:blue"> CoS </h1>
 
 This is a PyTorch implementation of the paper **"Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition"**
 
