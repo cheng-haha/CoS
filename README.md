@@ -4,7 +4,8 @@
 
 <p align="center">Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition </p>
 
-<center>[Dongzhou Cheng](https://github.com/cheng-haha)</center>
+<p align="center"><a href="https://github.com/cheng-haha">Dongzhou Cheng</a></p>
+
 
 ## Abstract
 TODO. We hope this research can bring a new perspective to the HAR community.
