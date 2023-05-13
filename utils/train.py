@@ -96,7 +96,7 @@ def CoS_train( train_set,valid_set,logger):
         labels    = torch.cat( label_list ).cpu().detach().numpy()
         predicted = torch.cat( predicted_list ).cpu().detach().numpy()
         acc_train = ( predicted == labels ).sum() / total_num
-        f1_train  = metrics.f1_score( labels, predicted, average='weighted' )
+        f1_train  = metrics.f1_score( labels, predicted, average='macro' )
         logger.info( 'Epoch:[{}/{}] - loss:{:.7f}, ConLoss:{:.7f}, train@Acc: {:.5f}, train@F1: {:.5f}'\
             .format( epoch, args.epochs, (total_loss-sum_c_loss)/len(train_loader) , sum_c_loss/len(train_loader),
                      acc_train, f1_train ) )
@@ -153,7 +153,7 @@ def Stand_train(train_set,valid_set,logger):
         predicted = torch.cat(predicted_list).cpu().detach().numpy()
         
         acc_train = ( predicted == label ).sum() / total_num
-        f1_train  = metrics.f1_score( label, predicted, average='weighted' )
+        f1_train  = metrics.f1_score( label, predicted, average='macro' )
         logger.info( 'Epoch:[{}/{}] - loss:{:.7f}, train@Acc: {:.5f}, train@F1: {:.5f}'\
             .format( epoch, args.epochs, total_loss/len(train_loader) , 
                      acc_train, f1_train ) )
@@ -194,7 +194,7 @@ def evaluate(model,logger, eval_loader, epoch, not_valid=True, mode='best', no_d
     ALL_label      = torch.cat(label_list).cpu().detach().numpy()
     ALL_predicted  = torch.cat(predicted_list).cpu().detach().numpy()
     acc_test       = corect_num/ total_num
-    f1_test        = metrics.f1_score(ALL_label, ALL_predicted, average='weighted')
+    f1_test        = metrics.f1_score(ALL_label, ALL_predicted, average='macro')
     if not_valid:
         logger.info('=> test@Acc: {:.5f}%, test@F1: {:.5f}'.format(acc_test, f1_test))
         c_mat  = confusion_matrix(label, predicted)
