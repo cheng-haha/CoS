@@ -1,8 +1,6 @@
 <p align=center> <img src="./Figure/cover.png" width = 60%/> </p>
 
-<h1 align="center"> CoS </h1>
-
-<p align="center"><em>Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition</em></p>
+<h1 align="center"> Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition </h1>
 
 <p align="center"><a href="https://github.com/cheng-haha">Dongzhou Cheng</a></p>
 
