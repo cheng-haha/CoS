@@ -1,4 +1,4 @@
-<p align=center> <img src="./Figure/frame.png" width = 60%/> </p>
+<p align=center> <img src="./Figure/cover.png" width = 60%/> </p>
 
 <h1 align="center"> CoS </h1>
 
