@@ -18,24 +18,26 @@ pip install -r requirements.txt
 ├── common.py
 ├── configs.py
 ├── dataset
-│   ├── HAR_dataset.py
-│   └── ucihar
+│   ├── HAR_dataset.py
+│   └── ucihar
 ├── Figure
-│   ├── frame.png
-│   └── inference_time.png
+│   ├── frame.png
+│   └── inference_time.png
 ├── loss
-│   └── SupCon.py
+│   └── SupCon.py
 ├── main.py
 ├── models
-│   ├── Baseline_CNN.py
-│   ├── CoS_CNN.py
-│   └── __init__.py
+│   ├── Baseline_CNN.py
+│   ├── complex
+│   ├── CoS_CNN.py
+│   └── __init__.py
 ├── README.md
 ├── requirements.txt
 ├── save
-│   └── ucihar
+│   └── ucihar
 ├── scripts
-│   └── run.sh
+│   └── run.sh
+├── tree.txt
 └── utils
     ├── augmentations.py
     ├── logger.py
@@ -43,7 +45,7 @@ pip install -r requirements.txt
     ├── setup.py
     └── train.py
 
-9 directories, 18 files
+10 directories, 19 files
 ```
 Get required dataset from [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php), do data pre-processing by sliding window strategy and split the data into different sets. Other datasets are too large, please contact us by e-mail <chengdongzhou666@qq.com> if you need one of these.
 ## Run

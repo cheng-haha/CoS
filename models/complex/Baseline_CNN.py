@@ -1,7 +1,7 @@
 '''
 Description: 
 Date: 2023-04-18 20:53:33
-LastEditTime: 2023-05-01 09:27:31
+LastEditTime: 2023-04-30 14:12:00
 FilePath: /chengdongzhou/action/CoS/models/Baseline_CNN.py
 '''
 import torch.nn as nn
@@ -13,6 +13,7 @@ import torch
 from configs import args
 from utils.metric import GetFeatureMapSize
 from common import channel_list,conv_list,maxp_list
+
 
 class CNN(nn.Module):
     def __init__(self, data_name , sub_number = 3  ):
@@ -46,3 +47,4 @@ class CNN(nn.Module):
             nn.ReLU( True ),
             nn.MaxPool2d( *(pooling_params) ) if pooling_params else nn.Identity()
         )
+

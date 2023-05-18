@@ -1,7 +1,7 @@
 '''
 Description: 
 Date: 2023-04-18 20:56:41
-LastEditTime: 2023-04-23 19:55:53
+LastEditTime: 2023-04-30 15:31:29
 FilePath: /chengdongzhou/action/CoS/utils/setup.py
 '''
 from torch.optim.lr_scheduler import MultiStepLR,ExponentialLR,CosineAnnealingLR,StepLR
@@ -39,6 +39,13 @@ def set_seed(seed):
     np.random.seed(seed)
     random.seed(seed)
     torch.backends.cudnn.deterministic = True
+
+def GetModel():
+    try:
+        model       = getattr(models, args.model)(args.dataset).cuda()
+    except Exception as e:
+        raise NotImplementedError("{} is not implemented".format(args.model))
+    return model
 
 def GetMOS(opt_type='sgd'):
     '''

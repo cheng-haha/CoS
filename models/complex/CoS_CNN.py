@@ -1,8 +1,8 @@
 '''
 Description: 
 Date: 2023-04-18 20:53:33
-LastEditTime: 2023-05-01 09:22:31
-FilePath: /chengdongzhou/action/CoS/models/CoS_CNN.py
+LastEditTime: 2023-05-01 10:48:12
+FilePath: /chengdongzhou/action/CoS/models/complex/CoS_CNN.py
 '''
 import torch.nn as nn
 import torch.nn.functional as F
@@ -29,7 +29,6 @@ class SimpleProjector(nn.Module):
     def forward(self, x):
         x = self.prejector(x)
         return x
-
 
 class CoS_CNN(nn.Module):
     def __init__(self, data_name , sub_number = 3, embedding_dim = args.proj_dim ):

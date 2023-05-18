@@ -104,7 +104,7 @@ def CoS_train( train_set,valid_set,logger):
 
         for elem , save_res in zip((Test_loss,Acc_test, F1_test),(Test_losses,Acc_tests, F1_tests)):
             save_res.append(elem)
-    return timer.sum(),Test_losses, Acc_tests, F1_tests
+    return timer.sum(),Test_losses, Acc_tests, F1_tests, state
 
 
 
@@ -161,12 +161,14 @@ def Stand_train(train_set,valid_set,logger):
 
         for elem , save_res in zip((Test_loss,Acc_test, F1_test),(Test_losses,Acc_tests, F1_tests)):
             save_res.append(elem)
-    
-    return timer.sum(),Test_losses, Acc_tests, F1_tests
+
+    return timer.sum(),Test_losses, Acc_tests, F1_tests, state
 
 
 def evaluate(model,logger, eval_loader, epoch, not_valid=True, mode='best', no_dict_ouput = False, state = {}):
     if not_valid:
+        eval_loader = DataLoader( eval_loader, batch_size=args.batch_size, shuffle=True, drop_last=False,
+                              num_workers=args.num_workers, pin_memory=True )
         model.load_state_dict(torch.load(os.path.join(args.save_folder, mode + '.pth')), strict=False)
     model.eval()
 
@@ -199,19 +201,19 @@ def evaluate(model,logger, eval_loader, epoch, not_valid=True, mode='best', no_d
         logger.info('=> test@Acc: {:.5f}%, test@F1: {:.5f}'.format(acc_test, f1_test))
         c_mat  = confusion_matrix(label, predicted)
         result = open(os.path.join(args.save_folder, 'result'), 'a+')
-        record_result(result, epoch, acc_test, f1_test, c_mat)
+        record_result(result, epoch, acc_test, f1_test, c_mat,record_flag = -1)
     else:
         logger.info('=> valid@Acc: {:.5f}, valid@F1: {:.5f}'.format(acc_test, f1_test))
         logger.info('=> cls_loss: {:.7f}'.format(batch_loss))
 
-    if acc_test > state['best_acc']:
-            # metrics for mesuring performance of model
-            state['best_acc'] = acc_test
-            state['best_f1'] = f1_test
-            # calculate best confusion matrix
-            state['cmt'] = confusion_matrix(ALL_label, ALL_predicted)
-            
-            state['best_epoch'] = epoch
-            torch.save( model.state_dict(), os.path.join(args.save_folder, 'best.pth') )
+        if acc_test > state['best_acc']:
+                # metrics for mesuring performance of model
+                state['best_acc'] = acc_test
+                state['best_f1'] = f1_test
+                # calculate best confusion matrix
+                state['cmt'] = confusion_matrix(ALL_label, ALL_predicted)
+                
+                state['best_epoch'] = epoch
+                torch.save( model.state_dict(), os.path.join(args.save_folder, 'best.pth') )
             
     return total_loss, acc_test, f1_test , state
