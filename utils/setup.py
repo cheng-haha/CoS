@@ -60,8 +60,6 @@ def GetMOS(opt_type='sgd'):
         raise NotImplementedError("{} is not implemented".format(args.model))
     if opt_type     == 'sgd':
         optimizer   = optim.SGD(      params=model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay, momentum=args.momentum )
-    elif opt_type   == 'adam':
-        optimizer   = optim.AdamW(    params=model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay    )
     else:
         raise NotImplementedError("{} is not implemented".format(args.opt_type))
     scheduler = LrSchedulerSet( optimizer , args )
