@@ -1,8 +1,8 @@
 '''
 Description: 
 Date: 2023-04-18 20:53:33
-LastEditTime: 2023-05-18 22:12:10
-FilePath: /chengdongzhou/action/CoS/main.py
+LastEditTime: 2023-05-18 22:23:33
+FilePath: \undefinedd:\Github\CoS\main.py
 '''
 
 import os
@@ -39,6 +39,7 @@ if __name__ == "__main__":
     acc_list,f1_list=[],[]
     for i in range(args.times):
         args.time   = i
+        set_seed(i+1)
         # train
         set_seed(i+1)
         logger.info(f'\n-------run time {i}--------\n')

@@ -1,6 +1,11 @@
-# CoS
-This is a PyTorch implementation of the paper ***"Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition"***
-![CoS start](./Figure/frame.png)
+<p align=center> <img src="./Figure/cover.png" width = 60%/> </p>
+
+
+<p align="center"><em>Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition</em></p>
+
+<p align="center"><a href="https://scholar.google.com.sg/citations?user=zOg9ENIAAAAJ&hl=zh-CN&oi=sra">Dongzhou Cheng</a></p>
+
+
 ## Abstract
 TODO. We hope this research can bring a new perspective to the HAR community.
 ## Getting Started
