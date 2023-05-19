@@ -41,7 +41,6 @@ if __name__ == "__main__":
         args.time   = i
         set_seed(i+1)
         # train
-        set_seed(i+1)
         logger.info(f'\n-------run time {i}--------\n')
         train = MetaTrain(args)
         print(f'==>The training method is {train.__name__}')
