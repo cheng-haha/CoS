@@ -7,7 +7,7 @@
 
 
 ## Abstract
-Our proposed method, CoS (Contrastive Supervision), enhances the feature quality of each layer and improves the generalization performance of the model, **without introducing any additional computational burden**. By leveraging temporal data augmentation and contrastive loss, CoS effectively strengthens the discriminative power of the learned features at every layer, leading to a more generalized representation. This approach exhibits remarkable scalability and **can be seamlessly integrated into various Human Activity Recognition (HAR) models**, making it applicable across a wide range of HAR tasks. With CoS, we not only achieve enhanced performance but also establish a solid foundation for future advancements in HAR research.
+Our proposed method, CoS (**Co**ntrastive **S**upervision), enhances the feature quality of each layer and improves the generalization performance of the model, **without introducing any additional computational burden**. By leveraging temporal data augmentation and contrastive loss, CoS effectively strengthens the discriminative power of the learned features at every layer, leading to a more generalized representation. This approach exhibits remarkable scalability and **can be seamlessly integrated into various Human Activity Recognition (HAR) models**, making it applicable across a wide range of HAR tasks. With CoS, we not only achieve enhanced performance but also establish a solid foundation for future advancements in HAR research.
 
 
 
