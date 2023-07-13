@@ -9,7 +9,15 @@
 ## A simple, efficient, and effective method
 Our proposed method, CoS (**Co**ntrastive **S**upervision), enhances the feature quality of each layer and improves the generalization performance of the model, **without introducing any additional computational burden**. By leveraging temporal data augmentation and contrastive loss, CoS effectively strengthens the discriminative power of the learned features at every layer, leading to a more generalized representation. This approach exhibits remarkable scalability and **can be seamlessly integrated into various Human Activity Recognition (HAR) models**, making it applicable across a wide range of HAR tasks. With CoS, we not only achieve enhanced performance but also establish a solid foundation for future advancements in HAR research.
 
-
+## Citation
+```
+@article{Cheng2023LearningHT,
+  title={Learning hierarchical time series data augmentation invariances via contrastive supervision for human activity recognition},
+  author={Dongzhou Cheng and Lei Zhang and Can Bu and Hao Wu and Aiguo Song},
+  journal={Knowledge-Based Systems},
+  year={2023}
+}
+```
 
 ## Getting Started
 1. Git clone the repo
@@ -61,12 +69,4 @@ NOTE: Check in the `config.py` file that your path `dataset_path` is correct. Th
 ```
 bash scripts/run.sh
 ```
-## Citation
-```
-@article{Cheng2023LearningHT,
-  title={Learning hierarchical time series data augmentation invariances via contrastive supervision for human activity recognition},
-  author={Dongzhou Cheng and Lei Zhang and Can Bu and Hao Wu and Aiguo Song},
-  journal={Knowledge-Based Systems},
-  year={2023}
-}
-```
+
