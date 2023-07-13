@@ -63,5 +63,10 @@ bash scripts/run.sh
 ```
 ## Citation
 ```
-TODO
+@article{Cheng2023LearningHT,
+  title={Learning hierarchical time series data augmentation invariances via contrastive supervision for human activity recognition},
+  author={Dongzhou Cheng and Lei Zhang and Can Bu and Hao Wu and Aiguo Song},
+  journal={Knowledge-Based Systems},
+  year={2023}
+}
 ```
