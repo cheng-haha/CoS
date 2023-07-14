@@ -11,11 +11,13 @@ Our proposed method, CoS (**Co**ntrastive **S**upervision), enhances the feature
 
 ## Citation
 ```
-@article{Cheng2023LearningHT,
+@article{cheng2023learning,
   title={Learning hierarchical time series data augmentation invariances via contrastive supervision for human activity recognition},
-  author={Dongzhou Cheng and Lei Zhang and Can Bu and Hao Wu and Aiguo Song},
+  author={Cheng, Dongzhou and Zhang, Lei and Bu, Can and Wu, Hao and Song, Aiguo},
   journal={Knowledge-Based Systems},
-  year={2023}
+  pages={110789},
+  year={2023},
+  publisher={Elsevier}
 }
 ```
 
