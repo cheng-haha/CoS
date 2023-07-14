@@ -14,7 +14,7 @@ python main.py --dataset ucihar --model CNN\
                         --mode CoSBase\
                         --times 1\
                         --chhander
-CoS                
+# CoS                
 python main.py --dataset ucihar --model CoS_CNN\
                                 --device 1\
                                 --batch_size 128\
