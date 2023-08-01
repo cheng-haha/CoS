@@ -4,7 +4,7 @@
 <p align="center"><em>Learning Hierarchical Time Series Data Augmentation Invariances via Contrastive Supervision for Human Activity Recognition (KBS 2023)</em></p>
 
 <p align="center"><a href="https://scholar.google.com.sg/citations?user=zOg9ENIAAAAJ&hl=zh-CN&oi=sra">Dongzhou Cheng</a></p>
-![图片](https://github.com/cheng-haha/CoS/assets/54107313/ba6f2c32-873b-4b6f-b80b-35b140490cbd)
+![图片](Figure/图片.png)
 
 
 ## A simple, efficient, and effective method
