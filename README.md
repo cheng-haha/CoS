@@ -10,7 +10,7 @@
 ![Overview](Figure/图片.png)
 
 
-## A simple, efficient, and effective method
+## A simple, efficient, and effective method (<a href="https://cheng-haha.github.io/data/Learning%20hierarchical%20time%20series%20data%20augmentation%20invariances%20via.pdf">paper</a>)
 Our proposed method, CoS (**Co**ntrastive **S**upervision), enhances the feature quality of each layer and improves the generalization performance of the model, **without introducing any additional computational burden**. By leveraging temporal data augmentation and contrastive loss, CoS effectively strengthens the discriminative power of the learned features at every layer, leading to a more generalized representation. This approach exhibits remarkable scalability and **can be seamlessly integrated into various Human Activity Recognition (HAR) models**, making it applicable across a wide range of HAR tasks. With CoS, we not only achieve enhanced performance but also establish a solid foundation for future advancements in HAR research.
 
 ## Citation
