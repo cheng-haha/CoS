@@ -69,7 +69,7 @@ pip install -r requirements.txt
 
 10 directories, 19 files
 ```
-Get required dataset from [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php), do data pre-processing by sliding window strategy and split the data into different sets. Other datasets are too large, please contact us by e-mail <chengdongzhou666@qq.com> if you need one of these.
+Get required dataset from [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php), do data pre-processing by sliding window strategy and split the data into different sets. Other datasets are too large, please contact us by e-mail <211843002@njnu.edu.cn> if you need one of these.
 ## Run
 NOTE: Check in the `config.py` file that your path `dataset_path` is correct. Then you can do
 ```
